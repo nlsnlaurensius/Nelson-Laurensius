@@ -733,7 +733,7 @@ p {
   overflow: hidden;
 }
 
-#projects .btn-project::before {
+#projects .project-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -744,7 +744,7 @@ p {
   transition: left 0.3s ease;
 }
 
-#projects .btn-project:hover::before {
+#projects .project-btn:hover::before {
   left: 0;
 }
 
