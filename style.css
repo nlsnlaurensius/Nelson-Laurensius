@@ -410,6 +410,7 @@ p {
 /* Hero Section */
 #hero {
   background-image: url(./img/backg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: top center;
   position: relative;
