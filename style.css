@@ -259,6 +259,19 @@ p {
   color: #E74252;
 }
 
+.section-title2 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #ECE8E3;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title2 span {
+  color: #E74252;
+}
+
 .cta {
   display: inline-block;
   padding: 10px 30px;
@@ -461,6 +474,15 @@ p {
 /* End Hero Section */
 
 /* experiences Section */
+
+#experiences {
+  background-image: url(./img/ft.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+
 #experiences .experiences {
   flex-direction: column;
   text-align: center;
@@ -721,36 +743,32 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
+
 #projects .btn-project {
   padding: 10px 20px;
   font-size: 1.5rem;
-  border-radius: 10px;
   margin-top: 20px;
   background: #ECE8E3;
+  border-radius: 10px;
   box-shadow: #E74252 0px 0px 10px;
+  padding: 10px 30px;
+  color: rgb(226, 17, 17);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
 }
+
+#projects .btn-project:hover {
+  color: black;
+  background-color: #E74252;
+}
+
 #projects .project-btn {
-  color: #E74252;
-  font-weight: 600;
-}
-#projects .btn-project {
-  position: relative;
-  overflow: hidden;
-}
-
-#projects .project-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.322);
-  transition: left 0.3s ease;
-}
-
-#projects .project-btn:hover::before {
-  left: 0;
+  color:#0f1923
 }
 
 /* End Projects section */
