@@ -193,52 +193,92 @@
           <h1 class="section-title">Contact <span>Me</span></h1>
         </div>
         <div class="contact_us_green">
-          <div class="responsive-container-block big-container">
-            <div class="responsive-container-block container">
-              <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2">
-                <form action="https://api.web3forms.com/submit" method="POST" class="form-box">
-                  <div class="container-block form-wrapper">
-                    <div class="head-text-box">
-                      <p class="text-blk contactus-head">Get in Touch</p>
-                      <p class="text-blk contactus-subhead">You can also contact me through some social media below</p>
-                    </div>
-                    <div class="responsive-container-block">
-                      <input type="hidden" name="access_key" value="d6063343-ace4-469d-a64a-d0dfae0f6a9f" />
-                      <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-6">
-                        <p class="text-blk input-title">FIRST NAME</p>
-                        <input class="input" id="ijowk-6" name="FirstName" required />
-                        <span class="error-message" id="error-firstname"></span>
-                      </div>
-                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">LAST NAME</p>
-                        <input class="input" id="indfi-4" name="Last Name" required />
-                        <span class="error-message" id="error-lastname"></span>
-                      </div>
-                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">EMAIL</p>
-                        <input class="input" id="ipmgh-6" name="Email" type="email" required />
-                        <span class="error-message" id="error-email"></span>
-                      </div>
-                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">PHONE NUMBER</p>
-                        <input class="input" id="imgis-5" name="PhoneNumber" required />
-                        <span class="error-message" id="error-phone"></span>
-                      </div>
-                      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
-                        <p class="text-blk input-title">MESSAGES</p>
-                        <textarea class="textinput" id="i5vyy-6" name="Messages" required></textarea>
-                        <span class="error-message" id="error-message"></span>
-                      </div>
-                    </div>
-                    <div class="btn-wrapper">
-                      <button class="submit-btn">Submit</button>
-                    </div>
-                  </div>
-                </form>
+  <div class="responsive-container-block big-container">
+    <div class="responsive-container-block container">
+      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2">
+        <form id="contactForm" class="form-box">
+          <div class="container-block form-wrapper">
+            <div class="head-text-box">
+              <p class="text-blk contactus-head">Get in Touch</p>
+              <p class="text-blk contactus-subhead">You can also contact me through some social media below</p>
+            </div>
+            <div class="responsive-container-block">
+              <input type="hidden" name="access_key" value="d6063343-ace4-469d-a64a-d0dfae0f6a9f" />
+              <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-6">
+                <p class="text-blk input-title">FIRST NAME</p>
+                <input class="input" id="firstName" name="FirstName" />
+                <span class="error-message" id="error-firstname" style="color: red; font-size: 15px"></span>
+              </div>
+              <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                <p class="text-blk input-title">LAST NAME</p>
+                <input class="input" id="lastName" name="LastName" />
+                <span class="error-message" id="error-lastname" style="color: red; font-size: 15px"></span>
+              </div>
+              <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                <p class="text-blk input-title">EMAIL</p>
+                <input class="input" id="email" name="Email" type="email" />
+                <span class="error-message" id="error-email" style="color: red; font-size: 15px"></span>
+              </div>
+              <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                <p class="text-blk input-title">PHONE NUMBER</p>
+                <input class="input" id="phoneNumber" name="PhoneNumber" />
+                <span class="error-message" id="error-phone" style="color: red; font-size: 15px"></span>
+              </div>
+              <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
+                <p class="text-blk input-title">MESSAGES</p>
+                <textarea class="textinput" id="messages" name="Messages"></textarea>
+                <span class="error-message" id="error-message" style="color: red; font-size: 15px"></span>
               </div>
             </div>
+            <div class="btn-wrapper">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
           </div>
-        </div>
+        </form>
+      </div>
+
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    let isValid = true;
+
+    // Clear previous error messages
+    document.getElementById("error-firstname").textContent = "";
+    document.getElementById("error-lastname").textContent = "";
+    document.getElementById("error-email").textContent = "";
+    document.getElementById("error-phone").textContent = "";
+    document.getElementById("error-message").textContent = "";
+
+    // Check if fields are empty
+    if (document.getElementById("firstName").value === "") {
+      document.getElementById("error-firstname").textContent = "First name is required";
+      isValid = false;
+    }
+    if (document.getElementById("lastName").value === "") {
+      document.getElementById("error-lastname").textContent = "Last name is required";
+      isValid = false;
+    }
+    if (document.getElementById("email").value === "") {
+      document.getElementById("error-email").textContent = "Email is required";
+      isValid = false;
+    }
+    if (document.getElementById("phoneNumber").value === "") {
+      document.getElementById("error-phone").textContent = "Phone number is required";
+      isValid = false;
+    }
+    if (document.getElementById("messages").value === "") {
+      document.getElementById("error-message").textContent = "Message is required";
+      isValid = false;
+    }
+
+    // Prevent form submission if there are validation errors
+    if (!isValid) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
         
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-5 wk-ipadp-10" id="ifgi">
                 <div class="container-box">
