@@ -82,7 +82,7 @@
             participating in organizational activities. I am a hardworking and communicative individual who excels in teamwork. And I'm also a musician who focuses on guitar instruments and I also create some fingerstyle cover content on my
             instagram.
           </p>
-          <a href="https://drive.google.com/file/d/1XLmbH8xvjsbUAYF3XZc634uv8ImtwWo7/view?usp=sharing" class="cta">Download CV</a>
+          <a href="https://drive.google.com/drive/u/2/folders/1dguuPX6OzwCZE1E39X8OU9OEqXU77NXO?hl=id" class="cta">Download CV</a>
         </div>
       </div>
     </section>
@@ -206,23 +206,28 @@
                       <input type="hidden" name="access_key" value="d6063343-ace4-469d-a64a-d0dfae0f6a9f" />
                       <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-6">
                         <p class="text-blk input-title">FIRST NAME</p>
-                        <input class="input" id="ijowk-6" name="FirstName" />
+                        <input class="input" id="ijowk-6" name="FirstName" required />
+                        <span class="error-message" id="error-firstname"></span>
                       </div>
                       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">LAST NAME</p>
-                        <input class="input" id="indfi-4" name="Last Name" />
+                        <input class="input" id="indfi-4" name="Last Name" required />
+                        <span class="error-message" id="error-lastname"></span>
                       </div>
                       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">EMAIL</p>
-                        <input class="input" id="ipmgh-6" name="Email" />
+                        <input class="input" id="ipmgh-6" name="Email" type="email" required />
+                        <span class="error-message" id="error-email"></span>
                       </div>
                       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">PHONE NUMBER</p>
-                        <input class="input" id="imgis-5" name="PhoneNumber" />
+                        <input class="input" id="imgis-5" name="PhoneNumber" required />
+                        <span class="error-message" id="error-phone"></span>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
                         <p class="text-blk input-title">MESSAGES</p>
-                        <textarea class="textinput" id="i5vyy-6" name="Messages"> </textarea>
+                        <textarea class="textinput" id="i5vyy-6" name="Messages" required></textarea>
+                        <span class="error-message" id="error-message"></span>
                       </div>
                     </div>
                     <div class="btn-wrapper">
@@ -231,6 +236,10 @@
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+        
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-5 wk-ipadp-10" id="ifgi">
                 <div class="container-box">
                   <div class="text-content">
